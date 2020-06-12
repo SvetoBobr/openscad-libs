@@ -1,6 +1,6 @@
 
-//separate(10) {cylinder(); cube(); cylinder();}
-separate_in_circle(5) {cylinder(); cube(); cylinder(); cube(); }
+//separate(10) {cylinder(r=1, $fn=20); cube(); cylinder($fn=6); sphere(); }
+separate_in_circle(3) {cylinder(r=1, $fn=20); cube(); cylinder($fn=6); sphere(); }
 
 // =================================================
 // === LIB STARTS HERE =============================
