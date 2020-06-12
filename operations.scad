@@ -24,19 +24,14 @@ module faska(r=1, h=1){
     difference(){
         union() { children(); }
         
-        lift(-0.01) // difference(){
-            //cylinder(h=h+0.01, r=100);
+        lift(-0.01) linear_extrude(h) difference(){
+            offset(r=r, chamfer=false)
+                projection(cut=true)
+                    union() { children(); };         
             
-            linear_extrude(h)
-                 difference(){
-                    offset(r=r, chamfer=false)
-                        projection(cut=true)
-                            union() { children(); };         
-          
-                    offset(r=-r, chamfer=false)
-                        projection(cut=true)
-                            union() { children(); };              
-                }
-    //    }
+            offset(r=-r, chamfer=false)
+                projection(cut=true)
+                    union() { children(); };              
+}
     }
 }
