@@ -22,15 +22,21 @@ module lift(z){
 
 module faska(r=1, h=1){
     difference(){
-       union() { children(); }
+        union() { children(); }
         
-       lift(-0.01)  difference(){
-            cylinder(h=h+0.01, r=100);
+        lift(-0.01) // difference(){
+            //cylinder(h=h+0.01, r=100);
             
             linear_extrude(h)
-                offset(r=-r, chamfer=false)
-                    projection(cut=true)
-                        union() { children(); };
-        }
+                 difference(){
+                    offset(r=r, chamfer=false)
+                        projection(cut=true)
+                            union() { children(); };         
+          
+                    offset(r=-r, chamfer=false)
+                        projection(cut=true)
+                            union() { children(); };              
+                }
+    //    }
     }
 }
