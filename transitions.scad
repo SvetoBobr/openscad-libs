@@ -20,7 +20,11 @@ separate_in_circle(r=30){
         color([1,0,0]) trans_cyl_in(a=1);
         color([0,0,1])trans_cyl_out(a=4);
     }
+    
+    
 }
+
+rounded_cylinder(h=20, or=10, ab=2, at=5);
 // =================================================
 // === LIB STARTS HERE =============================
 use <transform.scad>
@@ -48,4 +52,11 @@ module trans_cyl_out(or=20, a=0){
             }
         }
     
+}
+
+module rounded_cylinder(h=20, r=10, ab=0.0001, at=0.0001){
+    hull(){
+        lift(h) trans_cyl_out(or=r, a=at);
+        mirror([0,0,1]) trans_cyl_out(or=r, a=ab);
+    }
 }
