@@ -1,4 +1,4 @@
-$fn=40;
+//$fn=40;
 
 separate_in_circle(r=30){
     union(){
