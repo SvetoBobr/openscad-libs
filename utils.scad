@@ -43,7 +43,7 @@ module hidden_head_hole(h=0, l=50, type="M3"){
     if (type=="M5") {
         translate([0,0,0]) cylinder(h=l, r=5/2+0.3, center=true, $fn=20);
         translate([0,0,h]) cylinder(h=l/2, r=5.5, $fn=40);        
-    }    
+    } else   
     if (type=="M6") {
         translate([0,0,0]) cylinder(h=l, r=6/2+0.3, center=true, $fn=20);
         translate([0,0,h]) cylinder(h=l/2, r=6.5, $fn=40);        
