@@ -4,7 +4,7 @@ c=5;
 
 rect(a,b,c, corners=[2,0,5,0]);
 
-module rect (a,b,c, corners=[0,0,0,0]){
+module rounded_brick (a,b,c, corners=[0,0,0,0]){
     precision=0.00001;
     poly=20;
     
