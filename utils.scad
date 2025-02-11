@@ -38,7 +38,7 @@ module half_connection_hole(h=0, l=50, type="M3"){
 // now it's M3 with round head
 module no_nut_connection_hole(h=0, l=10, type="M3"){       
     if (type=="M3"){
-        translate([0,0,0]) cylinder(h=l, r=2.9/2-0.1, center=true, $fn=20);
+        translate([0,0,0]) cylinder(h=l, r=1.9/2-0.1, center=true, $fn=20);
         translate([0,0,0]) cylinder(h=h+1, r=2.9/2+0.2, $fn=20);
         translate([0,0,h]) cylinder(h=l/2, r=3.4, $fn=26);
     } 

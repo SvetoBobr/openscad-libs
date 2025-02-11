@@ -4,9 +4,11 @@ c=5;
 
 rect(a,b,c, corners=[2,0,5,0]);
 
-module rounded_brick (a,b,c, corners=[0,0,0,0]){
+module rounded_brick (a,b,c, corners=[0,0,0,0], poly=20){
+    //$fn=fn;
+    
     precision=0.00001;
-    poly=20;
+    //poly=20;
     
     for (i=[0:3]) assert (a>=2*corners[i] && b>=2*corners[i], "hui sosi");
         
